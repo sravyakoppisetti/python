@@ -1,0 +1,27 @@
+n,m=map(int,input().split())
+k=str(n)
+c=[]
+d=[]
+for i in range(0,len(k)):
+    if i in range(0,m):
+        c.append(int(k[i]))
+p=k[::-1]
+for i in range(0,len(p)):
+    if i in range(0,m):
+        d.append(int(p[i]))
+e=d[::-1]
+c=str(c)
+c=c.replace(" ","")
+c=c.replace("[","")
+c=c.replace("]","")
+c=c.replace("'","")
+c=c.replace(",","")
+c=int(c)
+e=str(e)
+e=e.replace(" ","")
+e=e.replace("[","")
+e=e.replace("]","")
+e=e.replace("'","")
+e=e.replace(",","")
+e=int(e)
+print(abs(c-e))
