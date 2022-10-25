@@ -1,0 +1,25 @@
+def prime(n):
+    if n==1:
+        return False
+    else:
+        
+        for i in range(2,n//2+1):
+            if n%i==0:
+                return False
+                break
+        else:
+            return True
+n=int(input())
+l=list(map(int,input().split()))
+p=min(l)
+q=max(l)
+r=l.index(p)
+s=l.index(q)
+c=0
+if r>s:
+    r,s=s,r
+for i in range(r,s+1):
+    if prime(l[i]):
+        c+=1
+
+print(c)
